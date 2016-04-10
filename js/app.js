@@ -38,8 +38,8 @@ function getRequest(searchableString){
 
 function showResults(results){
   $.each(results, function(index, value){
-    var channelHref = 'https://www.youtube.com/channel/';
-    var videoHref = 'https://www.youtube.com/watch?v=';
+    var channelHref = 'http://www.youtube.com/channel/';
+    var videoHref = 'http://www.youtube.com/watch?v=';
     var embededHref = 'http://www.youtube.com/embed/';
     var html = $('#template').html()
       .replace(/{{title}}/g, value.snippet.title)
