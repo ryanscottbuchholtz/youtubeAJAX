@@ -26,7 +26,7 @@ function getRequest(searchableString){
     part: 'snippet',
     key: key,
     q: searchableString,
-    maxResults: 6,
+    maxResults: 8,
     order: 'viewCount'
   };
   url = 'https://www.googleapis.com/youtube/v3/search';
@@ -57,20 +57,5 @@ $('#logo').click( function(){
 });
 
 $('#search-header').hide();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
