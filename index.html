@@ -11,6 +11,10 @@
 <body>
   <header class="clearfix">
     <h1 id="logo">tubeSearch</h1>
+    <form id="search-header">
+      <input type="text" id="query-header" placeholder="Keyword, Title, Genre, etc." />
+      <button type="submit" id="submit-button-header"><i class="fa fa-search"></i></button>
+    </form>
   </header>
   <div class="body-main-wrap">
     <div class="form-wrap">
@@ -23,7 +27,7 @@
   <div class="results-wrap">
     <script id="template" type="text/template">
       <div class="result">
-        <a href={{href}} target="_blank"><img src={{imageSource}} class="vidthumb"></a>
+        <iframe title="YouTube video player" src={{embedSource}} frameborder="0" allowfullscreen></iframe>
         <a href={{href}} target="_blank"><p class="title">{{title}}</p></a>
         <a href={{hrefChannel}} target="_blank"><p class="channel">{{channel}}</p></a>
       </div>
