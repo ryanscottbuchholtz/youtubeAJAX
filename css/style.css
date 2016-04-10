@@ -1,0 +1,171 @@
+
+* {
+  /*border: 1px solid orange;*/
+  box-sizing: border-box;
+}
+
+Body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*Header*/
+
+header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  color: #cc181c;
+  padding-left: 5%;
+  margin: 0;
+}
+
+#header-search {
+  width: 40%;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+
+/*Main content*/
+
+.body-main-wrap {
+  background: url('../assets/screen.jpg') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  box-shadow: 0 15px 20px -12px darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Form*/
+
+.form-wrap {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+#search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#query {
+  height: 65px;
+  width: 100%;
+  background-color: #ffffff;
+  outline: 0;
+  padding-left: 1%;
+/*  border-radius: 15px;
+  box-shadow: 0 15px 20px -12px darkgrey;*/
+  border: 1px solid #cc181c;
+
+}
+
+button[type="submit"] {
+  background-color: #ffffff;
+  border: none;
+  margin-left: -35px;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: 0;
+}
+
+/*Results*/
+
+.results-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 15px auto 0 auto;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  color: #167ac6;
+  font-size: 1.0em;
+  margin: 1% auto 0 auto;
+  text-transform: bolder;
+  line-height: 1.1em;
+  width: 80%;
+}
+
+.title:hover,
+.channel:hover {
+  text-decoration: underline;
+}
+
+.channel {
+  color: #767676;
+  margin: 0 auto 5% auto;
+  width: 80%;
+}
+
+.channel:hover {
+  color: #167ac6;
+}
+
+.vidthumb {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 15px 20px -12px darkgrey;
+}
+
+
+
+
+
+/*Footer*/
+
+footer {
+  height: 10vh;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .results-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .result {
+    width: 50%;
+  }
+  .channel {
+    /*margin: 8% auto 0 auto;*/
+  }
+}
+
+@media (min-width: 1269px) {
+
+  #search {
+    width: 60%;
+  }
+}
+
+

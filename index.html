@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <title>YouTube Search</title>
+</head>
+<body>
+  <header class="clearfix">
+    <h1 id="logo">tubeSearch</h1>
+  </header>
+  <div class="body-main-wrap">
+    <div class="form-wrap">
+      <form id="search">
+        <input type="text" id="query" placeholder="Keyword, Title, Genre, etc." />
+        <button type="submit" id="submit-button"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="results-wrap">
+    <script id="template" type="text/template">
+      <div class="result">
+        <a href={{href}} target="_blank"><img src={{imageSource}} class="vidthumb"></a>
+        <a href={{href}} target="_blank"><p class="title">{{title}}</p></a>
+        <a href={{hrefChannel}} target="_blank"><p class="channel">{{channel}}</p></a>
+      </div>
+    </script>
+  </div>
+  <footer>
+    
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
