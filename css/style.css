@@ -152,17 +152,27 @@ header h1 {
   color: #167ac6;
 }
 
-.vidthumb {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  box-shadow: 0 15px 20px -12px darkgrey;
-}
-
 iframe {
   width: 100%;
   height: 100%;
   box-shadow: 0 15px 20px -12px darkgrey;
+}
+
+.get-more {
+  width: 80%;
+  margin: 0 auto;
+  height: 40px;
+  background-color: lightgrey;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.get-more:hover {
+  background-color: darkgrey;
+  color: #f2f2f2;
+  box-shadow: 0 15px 20px -12px darkgrey;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
 
@@ -202,6 +212,11 @@ footer {
   iframe {
     width: 90%;
   }
+
+  .get-more {
+    width: 40%;
+  }
+
 }
 
 @media (min-width: 1269px) {

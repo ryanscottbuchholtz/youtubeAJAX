@@ -1,10 +1,14 @@
+var searchTerm = '';
+var nextPageToken = '';
+
 $(document).ready(function() {
 
 $(function(){
   $('#search-header').submit(function(event){
     event.preventDefault();
     $('.result').empty();
-    var searchTerm = $('#query-header').val();
+    searchTerm = '';
+    searchTerm += $('#query-header').val();
     getRequest(searchTerm);
     $('#query-header').val('');
   });
@@ -14,25 +18,46 @@ $(function(){
   $('#search').submit(function(event){
     event.preventDefault();
     $('.body-main-wrap').hide();
-    var searchTerm = $('#query').val();
+    searchTerm += $('#query').val();
     $('#search-header').show();
     getRequest(searchTerm);
+    $('.get-more').show();
   });
 });
 
-function getRequest(searchableString){
+$(function(){
+  $('.get-more').click(function(event){
+    event.preventDefault();
+    console.log('button pressed');
+    getRequest(searchTerm, nextPageToken);
+  });
+});
+
+$('#logo').click( function(){
+  location.reload(true);
+});
+
+$('#search-header').hide();
+$('.get-more').hide();
+
+});
+
+function getRequest(searchableString, pageToken){
   var key = 'AIzaSyB4nXx6bcBZjW467eSU1Q0b_LBkdl7d8qs';
   var params = {
     part: 'snippet',
     key: key,
     q: searchableString,
     maxResults: 8,
+    pageToken: pageToken,
     order: 'viewCount'
   };
   url = 'https://www.googleapis.com/youtube/v3/search';
 
   $.getJSON(url, params, function(data){
     showResults(data.items);
+    nextPageToken = (data.nextPageToken);
+    console.log(nextPageToken);
   });
 }
 
@@ -52,10 +77,5 @@ function showResults(results){
   });
 }
 
-$('#logo').click( function(){
-  location.reload(true);
-});
 
-$('#search-header').hide();
 
-});
